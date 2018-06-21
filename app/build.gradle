@@ -32,11 +32,24 @@ dependencies {
     //use this while developing:
 //    implementation project(":matterlib")
 
-    //when using a particular flavor:
-//    implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:0.0.5:liquid@aar"
 
-    //when not specifying the flavor, it will default to the defaultPublishConfig
-    implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:0.0.5"
+//// when using a particular flavor:
+////   for multi-lib
+//    implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:$library_version:liquid@aar"
+
+////   for single library
+//    implementation "com.github.mirceanis:multi-flavor-lib-demo:$library_version:solid@aar"
+
+
+//// when using the default flavor it will default to the defaultPublishConfig
+
+////   for multi-lib
+    implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:$library_version"
+
+////   for single library
+//    implementation "com.github.mirceanis:multi-flavor-lib-demo:$library_version"
+
+
 
 
 
