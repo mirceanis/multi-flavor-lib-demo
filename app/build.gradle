@@ -44,10 +44,10 @@ dependencies {
 //// when using the default flavor it will default to the defaultPublishConfig
 
 ////   for multi-lib
-    implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:$library_version"
+//    implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:$library_version"
 
 ////   for single library
-//    implementation "com.github.mirceanis:multi-flavor-lib-demo:$library_version"
+    implementation "com.github.mirceanis:multi-flavor-lib-demo:$library_version"
 
 
 
