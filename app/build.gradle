@@ -33,10 +33,10 @@ dependencies {
 //    implementation project(":matterlib")
 
     //when using a particular flavor:
-//    implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:0.0.3:liquid@aar"
+//    implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:0.0.4:liquid@aar"
 
     //when not specifying the flavor, it will default to the defaultPublishConfig
-    implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:0.0.3"
+    implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:0.0.4"
 
 
 
@@ -51,6 +51,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
-task install >> {
+task install << {
     //nop
 }
