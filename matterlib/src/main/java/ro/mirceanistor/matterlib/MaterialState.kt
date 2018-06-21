@@ -1,8 +1,9 @@
 package ro.mirceanistor.matterlib
 
-class MaterialState {
+import android.content.Context
 
-    public val state: String
-        get = "solid"
+object MaterialState {
+
+    fun getState(context: Context) = context.getString(R.string.material_state)
 
 }

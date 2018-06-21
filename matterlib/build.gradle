@@ -21,6 +21,18 @@ android {
         }
     }
 
+    flavorDimensions "solidity"
+
+    productFlavors {
+        liquid {
+            dimension "solidity"
+
+        }
+        solid {
+            dimension "solidity"
+        }
+    }
+
 }
 
 dependencies {
