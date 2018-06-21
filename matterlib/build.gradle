@@ -55,7 +55,7 @@ dependencies {
 }
 
 group = 'com.github.mirceanis.multi-flavor-lib-demo'
-version = "0.0.4"
+version = "0.0.5"
 
 if (android.productFlavors.size() > 0) {
     android.libraryVariants.all { variant ->
@@ -68,9 +68,10 @@ if (android.productFlavors.size() > 0) {
         artifacts {
             archives(bundleTask.archivePath) {
                 //you'll be able to use flavors by the following coordinates:
-                // "com.github.mirceanis:matterlib:0.0.4:liquid@aar"
+                // "com.github.mirceanis.multi-flavor-lib-demo:matterlib:0.0.5:liquid@aar"
                 classifier variant.flavorName
                 builtBy bundleTask
+                name = project.name
             }
         }
 
