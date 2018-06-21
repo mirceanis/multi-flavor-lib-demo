@@ -1,7 +1,6 @@
-package ro.mirceanistor.matterlib
+package ro.mirceanistor.energylib
 
 import android.content.Context
-import ro.mirceanistor.energylib.R
 
 object EnergyLevel {
 
