@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import ro.mirceanistor.matterlib.MaterialState
+import ro.mirceanistor.energylib.EnergyLevel
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,5 +13,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         material_state.text = MaterialState.getState(this)
+        energy_level.text = EnergyLevel.getState(this)
     }
 }

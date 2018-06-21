@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Matter state</string>
+    <string name="material_state">Material state</string>
 </resources>

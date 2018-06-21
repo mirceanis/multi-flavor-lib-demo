@@ -1,1 +1,1 @@
-include ':app', ':matterlib'
+include ':app', ':matterlib', ':energylib'
