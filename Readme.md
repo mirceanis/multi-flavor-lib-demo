@@ -6,8 +6,14 @@ The gist of it is using [dcendents gradle plugin](https://github.com/dcendents/a
 
 ### What's here:
 
-* an android library module (matterlib) that gets published
-* a demoapp that gets to use the lib
+* on master
+  * two library projects (matterlib and energylib) with flavors that gets published
+  * a demoapp that gets to use the libs
+* on the single-lib branch
+  * just one library with flavors
+  * the demoapp
+
+There's a difference in the way jitpack names the artifacts for single vs multiple library repositories.
 
 ### Flavor coordinates on jitpack
 
