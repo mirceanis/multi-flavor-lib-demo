@@ -13,13 +13,13 @@ The gist of it is using [dcendents gradle plugin](https://github.com/dcendents/a
 
 When working with a flavor of the library, include it like this:
 ```groovy
-implementation "com.github.<USER>:<library-module>:<version>:<flavor-name>@aar"
+implementation "com.github.<USER>.<REPO>:<library-module>:<version>:<flavor-name>@aar"
 ```
 
 If the library has a `defaultPublishConfig`, there should be an artifact with the following coordinates:
 
 ```groovy
-implementation "com.github.<USER>:<library-module>:<version>"
+implementation "com.github.<USER>.<REPO>:<library-module>:<version>"
 ```
 
 jitpack is great for OSS.
