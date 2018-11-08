@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Matter state</string>
-    <string name="material_state">Material state</string>
+    <string name="material_state_label">Material state</string>
+    <string name="energy_level_label">Energy level</string>
 </resources>

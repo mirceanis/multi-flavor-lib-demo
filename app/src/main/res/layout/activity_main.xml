@@ -11,25 +11,28 @@
         android:id="@+id/material_state_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/material_state" />
+        android:text="@string/material_state_label" />
+
     <TextView
         android:id="@+id/material_state"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        tools:text="solid" />
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        tools:text="solid state" />
+
     <TextView
         android:id="@+id/energy_level_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/material_state" />
+        android:layout_marginTop="64dp"
+        android:text="@string/energy_level_label" />
+
     <TextView
         android:id="@+id/energy_level"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        tools:text="solid" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        tools:text="high energy" />
 
 </LinearLayout>

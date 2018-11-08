@@ -13,6 +13,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         material_state.text = MaterialState.getState(this)
-        energy_level.text = EnergyLevel.getState(this)
+        energy_level.text = EnergyLevel.getLevel(this)
     }
 }
