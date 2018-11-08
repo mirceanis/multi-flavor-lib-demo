@@ -14,9 +14,10 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        missingDimensionStrategy "solidity",
-                "liquid",
-                "solid"
+        // Since the app does not have the same flavors and dimensions as the libraries, you have to define the fallbacks
+        // This is only for development as the ones from jitpack will already be built per flavor
+        missingDimensionStrategy "solidity", "liquid", "solid"
+        missingDimensionStrategy "level", "high", "low"
     }
 
     buildTypes {
@@ -28,11 +29,28 @@ android {
 
 }
 
+//uncomment this during development to work with the local projects instead of the ones from jitpack
+configurations.all {
+    resolutionStrategy.preferProjectModules()
+}
+
 dependencies {
 
-    //use this while developing:
-//    implementation project(":matterlib")
 
+// As a developer of the libs you'd rather work with the local projects:
+
+//uncomment this during development to work with the local projects instead of the ones from jitpack
+// to switch between the library flavors
+// you either have to provide the same flavors for the app or match the missingDimensionStrategy
+    implementation project(":matterlib")
+    implementation project(":energylib")
+
+
+
+
+
+
+// As a user of the published libraries:
 
 //// when using a particular flavor:
 ////   for multi-lib
@@ -40,7 +58,6 @@ dependencies {
 
 ////   for single library
 //    implementation "com.github.mirceanis:multi-flavor-lib-demo:$library_version:solid@aar"
-
 
 //// when using the default flavor it will default to the defaultPublishConfig
 
