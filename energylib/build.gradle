@@ -3,11 +3,11 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -59,11 +59,12 @@ version = library_version
 
 if (android.productFlavors.size() > 0) {
     android.libraryVariants.all { variant ->
+
         if (variant.name.toLowerCase().contains("debug")) {
             return
         }
 
-        def bundleTask = tasks["bundle${variant.name.capitalize()}"]
+        def bundleTask = tasks["bundle${variant.name.capitalize()}Aar"]
 
         artifacts {
             archives(bundleTask.archivePath) {
