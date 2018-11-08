@@ -23,16 +23,32 @@ android {
     }
 
     defaultPublishConfig "solidRelease"
+    // this is the default flavor and is accessible at these coordinates:
+    // for a project that builds multiple libraries, they will be at these coordinates:
+    //
+    // "com.github.<user-name>.<repository-name>:<module-name>:<github-tag>
+    //
+    // Example for this particular demo:
+    // implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:0.0.9-multi-lib"
 
     flavorDimensions "solidity"
 
     productFlavors {
         liquid {
             dimension "solidity"
-
+            //for a project that builds multiple libraries, the flavor will be at these coordinates:
+            // "com.github.<user-name>.<repository-name>:<module-name>:<github-tag>:<flavor>@aar
+            //
+            // Example for this particular demo and flavor:
+            // implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:0.0.9-multi-lib:liquid@aar"
         }
         solid {
             dimension "solidity"
+            //for a project that builds multiple libraries, the flavor will be at these coordinates:
+            // "com.github.<user-name>.<repository-name>:<module-name>:<github-tag>:<flavor>@aar
+            //
+            // Example for this particular demo and flavor:
+            // implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:0.0.9-multi-lib:solid@aar"
         }
     }
 
