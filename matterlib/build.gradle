@@ -3,11 +3,11 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -23,16 +23,31 @@ android {
     }
 
     defaultPublishConfig "solidRelease"
+    // this is the default flavor and is accessible at these coordinates:
+    // for a project that builds a single library, it will be at these coordinates:
+    // "com.github.<user-name>:<repository-name>:<github-tag>
+    //
+    // Example for this particular demo:
+    // implementation "com.github.mirceanis:multi-flavor-lib-demo:0.0.7-single-lib"
 
     flavorDimensions "solidity"
 
     productFlavors {
         liquid {
             dimension "solidity"
-
+            //for a project that builds a single library, the flavor will be at these coordinates:
+            // "com.github.<user-name>:<repository-name>:<github-tag>:<flavor>@aar
+            //
+            // Example for this particular demo and flavor:
+            // implementation "com.github.mirceanis:multi-flavor-lib-demo:0.0.7-single-lib:liquid@aar"
         }
         solid {
             dimension "solidity"
+            //for a project that builds a single library, the flavor will be at these coordinates:
+            // "com.github.<user-name>:<repository-name>:<github-tag>:<flavor>@aar
+            //
+            // Example for this particular demo and flavor:
+            // implementation "com.github.mirceanis:multi-flavor-lib-demo:0.0.7-single-lib:solid@aar"
         }
     }
 
@@ -59,11 +74,12 @@ version = library_version
 
 if (android.productFlavors.size() > 0) {
     android.libraryVariants.all { variant ->
+
         if (variant.name.toLowerCase().contains("debug")) {
             return
         }
 
-        def bundleTask = tasks["bundle${variant.name.capitalize()}"]
+        def bundleTask = tasks["bundle${variant.name.capitalize()}Aar"]
 
         artifacts {
             archives(bundleTask.archivePath) {
