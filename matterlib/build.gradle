@@ -89,5 +89,16 @@ if (android.productFlavors.size() > 0) {
             }
         }
 
+        def flavorName = variant.flavorName.toLowerCase()
+        def flavorSourcesTask = tasks.create(name : "${flavorName}SourcesJar", type: Jar) {
+            classifier = "${flavorName}-sources"
+            from android.sourceSets.main.javaDirectories
+            from android.sourceSets[flavorName].javaDirectories
+        }
+
+        artifacts {
+            archives flavorSourcesTask
+        }
+
     }
 }
