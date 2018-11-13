@@ -2,8 +2,7 @@
 
 This project demonstrates how to publish multi-flavor android libraries to jitpack.
 
-[![Release](https://jitpack.io/v/mirceanis/multi-flavor-lib-demo.svg)]
-(https://jitpack.io/#mirceanis/multi-flavor-lib-demo)
+[![Release](https://jitpack.io/v/mirceanis/multi-flavor-lib-demo.svg)](https://jitpack.io/#mirceanis/multi-flavor-lib-demo)
 
 The gist of it is using [dcendents gradle plugin](https://github.com/dcendents/android-maven-gradle-plugin)
 and understanding that jitpack calls "./gradlew install" if left to auto-config
@@ -59,4 +58,9 @@ branch of this project.
 
 
 
-**jitpack is great for OSS.**
+**jitpack.io is great for OSS.**
+
+
+### Note
+
+You can see the build logs for this sample library here: https://jitpack.io/#mirceanis/multi-flavor-lib-demo
