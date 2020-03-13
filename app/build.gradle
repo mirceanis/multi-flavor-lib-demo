@@ -54,10 +54,10 @@ dependencies {
 
 //// when using a particular flavor:
 ////   for multi-lib
-//    implementation "com.github.mirceanis.multi-flavor-lib-demo:matterlib:$library_version:liquid@aar"
+//    implementation ("com.github.mirceanis.multi-flavor-lib-demo:matterlib:$library_version:liquid@aar") { transitive = true }
 
 ////   for single library
-//    implementation "com.github.mirceanis:multi-flavor-lib-demo:$library_version:solid@aar"
+//    implementation ("com.github.mirceanis:multi-flavor-lib-demo:$library_version:solid@aar") { transitive = true }
 
 //// when using the default flavor it will default to the defaultPublishConfig
 
